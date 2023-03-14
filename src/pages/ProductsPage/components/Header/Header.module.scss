@@ -1,0 +1,58 @@
+@import "@config/variables";
+
+.header {
+  padding-top: 80px;
+  height: 80px;
+  background: linear-gradient(to right, #cb11ab 0, #481173 100%) no-repeat;
+
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: end;
+
+  .container {
+    margin: 0 auto;
+    max-width: 1260px;
+    height: 70%;
+    // padding: 16px 0 44px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    .nav {
+      width: 200px;
+      height: 100%;
+      flex: 1 1 200px;
+      text-transform: uppercase;
+
+      color: $white;
+      font-size: 30px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .search {
+      width: 800px;
+      height: 100%;
+      flex: 2 1 800px;
+      border-radius: 50px;
+
+      background-color: rgba(211, 211, 211, 0.5);
+      opacity: 0.5;
+
+      transition: 0.5s ease all;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $lite-gray;
+      }
+    }
+
+    .info {
+      width: 200px;
+      height: 100%;
+      flex: 1 1 200px;
+    }
+  }
+}

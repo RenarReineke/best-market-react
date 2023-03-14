@@ -1,0 +1,84 @@
+@import '@config/variables';
+
+.form {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &-button {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 160px;
+    height: 40px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background-color: $main-color;
+    color: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      border-bottom: 2px solid crimson;
+    }
+
+    &:focus {
+      border-bottom: 2px solid crimson;
+    }
+  }
+
+  .label {
+    padding-left: 10px;
+    padding-right: 10px;
+    // border: 2px solid deepskyblue;
+    border-bottom: transparent;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: deepskyblue;
+  }
+
+  .input {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 100%;
+    height: 40px;
+
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid deepskyblue;
+    border-radius: 6px;
+
+    font-size: 20px;
+    color: rgb(30, 28, 28);
+
+    display: flex;
+    align-items: center;
+
+    // text-align: center;
+
+    background-color: rgb(208, 234, 252);
+
+    &:hover {
+      border-bottom: 2px solid rgb(1, 141, 188);
+    }
+
+    &:focus {
+      border-bottom: 2px solid rgb(0, 101, 135);
+    }
+  }
+}
+
+.error {
+  margin-bottom: 20px;
+  height: 20px;
+  color: red;
+  background-color: transparent;
+}

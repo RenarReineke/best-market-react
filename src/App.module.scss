@@ -1,0 +1,42 @@
+.main {
+  text-align: center;
+
+  & .title {
+    margin-bottom: 50px;
+  }
+
+  & .container {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // background-color: burlywood;
+
+    & .magic-button {
+      width: 45%;
+      height: 200px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 5px;
+      color: black;
+      box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.75);
+
+      :hover {
+        box-shadow: 10px 10px 18px 15px rgba(147, 20, 20, 0.75);
+      }
+    }
+
+    & :first-child {
+      background-color: skyblue;
+    }
+
+    & :last-child {
+      background-color: pink;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "@config/variables";
+
+.input {
+  display: flex;
+  align-items: center;
+  outline: none;
+
+  &-search {
+    padding: 20px;
+    width: 800px;
+    height: 100%;
+
+    border: none;
+    border-radius: 50px;
+
+    background-color: rgba(211, 211, 211, 0.5);
+    opacity: 0.5;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: $black;
+
+    transition: 0.5s ease all;
+    cursor: text;
+
+    &:hover {
+      background-color: $lite-gray;
+    }
+  }
+}

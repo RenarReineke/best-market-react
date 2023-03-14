@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins";
+  font-style: normal;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(88, 179, 131);
+
+  &:hover {
+    color: black;
+  }
+
+  &:active {
+    color: red;
+  }
+
+  &:visited {
+    color: rgb(179, 88, 88);
+    // &:hover {
+    //   color: gray;
+    // }
+  }
+}
+
+input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
