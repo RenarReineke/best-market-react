@@ -8,7 +8,12 @@ import { useInput } from "../../hooks/useInput";
 import style from "./Form.module.scss";
 import { signIn, signOut, getUser } from "@store/userSlice";
 
-export const AuthForm = () => {
+
+type AuthFormProps = {
+  isOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const AuthForm = ({isOpen}: AuthFormProps) => {
 
   const dispath = useDispatch();
 
@@ -44,6 +49,7 @@ export const AuthForm = () => {
         setToken(res.data.token);
         dispath(signIn());
         dispath(getUser(res.data.user));
+        isOpen(false);
       })
       .catch((e) => console.log("Возникла ошибка при попытке войти: ", e))
       .finally(() => {

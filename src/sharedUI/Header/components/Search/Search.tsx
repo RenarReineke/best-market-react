@@ -25,7 +25,7 @@ const Search = () => {
         onChange={setSearchValue}
         placeholder="Я ищу..."
       />
-      <Button type="submit" className={style["search-button"]} height={"100%"}>
+      <Button type="submit" className={style["search-button"]}>
         <SearchIcon />
       </Button>
     </form>

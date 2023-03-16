@@ -1,14 +1,21 @@
 import { SVGIconProps } from "../types";
 
-const WrenchIcon = ({ color }: SVGIconProps) => {
+const WrenchIcon = ({ 
+  className = "",
+  color = "white",
+  strokeColor = "black",
+  widthSVG = 25,
+  heightSVG = 25,
+ }: SVGIconProps) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       fill={`${color}`}
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
+      stroke={strokeColor}
+      width={widthSVG}
+      height={heightSVG}
+      className={className}
     >
       <path
         strokeLinecap="round"

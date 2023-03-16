@@ -61,9 +61,11 @@ const ProductCard = ({
       <HeartIcon className={style.favorites} />
 
       <div className={style.addon}>
-        <Button buttonStyle={ButtonStyle.primary} height="30px">
-          В корзину
-        </Button>
+        <Link to='/cart'>
+          <Button buttonStyle={ButtonStyle.primary}>
+            В корзину
+          </Button>
+        </Link>
       </div>
     </div>
   );

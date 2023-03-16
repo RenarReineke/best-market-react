@@ -12,6 +12,7 @@ import CategoryDetailPage from "./pages/AdminPage/components/Main/components/Cat
 
 import {store} from './store/Redux/store';
 import { Provider } from "react-redux";
+import CartPage from "@pages/CartPage";
 
 const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/products", element: <ProductsPage /> },
       { path: "/products/:id", element: <ProductDetailPage /> },
+      { path: "/cart", element: <CartPage /> },
       {
         path: "/admin",
         element: <AdminDashboard />,

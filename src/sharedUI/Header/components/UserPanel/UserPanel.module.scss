@@ -12,6 +12,7 @@
     font-size: 14px;
 
     .item {
+        color: $text-color;
         height: 100%;
         &:hover {
             cursor: pointer;
