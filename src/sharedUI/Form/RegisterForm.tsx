@@ -1,11 +1,13 @@
 import { ILoginRequest } from "@api/request";
 import { AuthService } from "@api/services/AuthService";
+import { useLocalStorage } from "@hooks/useLocalStorage";
 import Button from "@sharedUI/Button";
 import { FormEvent } from "react";
 import { useInput } from "../../hooks/useInput";
 import style from "./Form.module.scss";
 
 export const RegisterForm = () => {
+  
   const login = useInput({
     isEmptyError: true,
     minValueError: 3,
