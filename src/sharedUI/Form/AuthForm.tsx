@@ -3,10 +3,14 @@ import { AuthService } from "@api/services/AuthService";
 import { useLocalStorage } from "@hooks/useLocalStorage";
 import Button from "@sharedUI/Button";
 import { FormEvent } from "react";
+import { useDispatch } from "react-redux";
 import { useInput } from "../../hooks/useInput";
 import style from "./Form.module.scss";
+import { signIn, signOut, getUser } from "@store/userSlice";
 
 export const AuthForm = () => {
+
+  const dispath = useDispatch();
 
   const [token, setToken] = useLocalStorage('token');
 
@@ -38,6 +42,8 @@ export const AuthForm = () => {
         console.log(res.data.message);
         console.log('Токен с бэка: ', res.data.token);
         setToken(res.data.token);
+        dispath(signIn());
+        dispath(getUser(res.data.user));
       })
       .catch((e) => console.log("Возникла ошибка при попытке войти: ", e))
       .finally(() => {
